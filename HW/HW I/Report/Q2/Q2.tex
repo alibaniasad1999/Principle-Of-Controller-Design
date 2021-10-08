@@ -1,0 +1,155 @@
+\section{Question 2}
+\begin{equation}
+	G(s) = \dfrac{K}{s(s^2 + s + a)}, \quad a > 0, \quad K > 0
+\end{equation}
+The transfer function in which s is replaced by $j\omega$ where $\omega$ is frequency.
+
+% The phase angle:
+% $$
+% \angle G(jw) = \left. \angle K \right. - (\angle j\omega + \left.\angle \left((j\omega)^2 + j\omega + a \right))\right.
+% $$
+% $$
+% \angle G(jw) = \left. \angle K \right. - (\angle j\omega + \left.\angle \left(j\omega -\omega^2 + a \right))\right.
+% $$
+% $$
+% \angle G(jw) = \tan^{-1}\left(\dfrac{0}{K}\right) - \tan^{-1}\left(\dfrac{\omega}{0}\right) - \tan^{-1}\left(\dfrac{\omega}{a - \omega^2}\right)
+% $$
+% $$
+% \angle G(jw) = 0^{\circ} - 90^{\circ} - \tan^{-1}\left(\dfrac{\omega}{a - \omega^2}\right) = 0 - \dfrac{\pi}{2} - \tan^{-1}\left(\dfrac{\omega}{a - \omega^2}\right)
+% $$
+% The amplitude ratio:
+% $$
+% \left\vert G(j\omega) \right\vert = \left\vert \dfrac{K}{j\omega\left((j\omega)^2 + j\omega + a \right)} \right\vert 
+% =  \left\vert \dfrac{K}{j\omega\left(j\omega -\omega^2 + a\right)} \right\vert
+% $$
+% $$
+% \left\vert G(j\omega) \right\vert = \dfrac{\left\vert K \right\vert}{\left\vert j\omega \right\vert
+% \left\vert j\omega -\omega^2 + a \right\vert
+% } = \dfrac{K}{\omega\sqrt{\omega^2 + (\omega^2-a)^2}}
+% $$
+Cause $a>0$ we have just on pole on imaginary axis.
+\begin{figure}[H]
+	\caption{Contour near the origin of the s plane and closed contour in the s plane}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q2/nyquist_s_plane.png}
+\end{figure}
+On the semicircular path with radius $\epsilon$ (where $\epsilon \ll 1 $), the complex variable s can be written
+$$
+s = \epsilon \exp(j\theta)
+$$
+where $\theta$ varies from $-\dfrac{\pi}{2}$ to $\dfrac{\pi}{2}$.
+\begin{figure}[H]
+	\caption{s-Plane}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q2/nyquist_s_plane_name.png}
+\end{figure}
+Now we calculate $j\omega$ in A, C, D and F.
+
+A:
+
+$s = j\omega,\quad \omega = -\epsilon$
+$$
+ \lim_{\omega\to -\epsilon}G(j\omega)  = \dfrac{K}{-j\epsilon((j\epsilon)^2 - j\epsilon + a)} = \dfrac{K}{-j\epsilon(-\epsilon^2 - j\epsilon + a)} = \dfrac{K}{j\epsilon^3 - \epsilon^2 - aj\epsilon}
+$$
+$$
+\lim_{\epsilon \to 0}\dfrac{K}{j\epsilon^3 - \epsilon^2 - aj\epsilon} = \lim_{\epsilon \to 0} \dfrac{K}{-aj\epsilon} = \lim_{\epsilon \to 0} \dfrac{Kj}{a\epsilon} =  \infty \angle 90^{\circ}
+$$
+
+C:
+
+$s = j\omega,\quad \omega = \epsilon$
+$$
+ \lim_{\omega\to \epsilon}G(j\omega)  = \dfrac{K}{j\epsilon((j\epsilon)^2 + j\epsilon + a)} = \dfrac{K}{j\epsilon(-\epsilon^2 + j\epsilon + a)} = \dfrac{K}{j\epsilon^3 - \epsilon^2 - aj\epsilon}
+$$
+$$
+\lim_{\epsilon \to 0}\dfrac{K}{j\epsilon^3 - \epsilon^2 + aj\epsilon} = \lim_{\epsilon \to 0} \dfrac{K}{-aj\epsilon} = \lim_{\epsilon \to 0} \dfrac{-Kj}{a\epsilon} =  \infty \angle -90^{\circ}
+$$
+
+A to C:
+
+$s = j\omega,\quad \omega = \epsilon\exp(j\theta), \quad \theta: -\dfrac{\pi}{2}\to 0 \to \dfrac{\pi}{2}(CCW)$
+$$
+ \lim_{\epsilon\to 0}G(\epsilon\exp(j\theta))  =\dfrac{K}{\epsilon\exp(j\theta)((\epsilon\exp(j\theta))^2 + \epsilon\exp(j\theta) + a)} =  \dfrac{K}{\epsilon^3\exp(3j\theta) + \epsilon^2\exp(2j\theta) + a\epsilon\exp(j\theta)} 
+$$
+$$
+\lim_{\epsilon \to 0}\dfrac{K}{a\epsilon\exp(j\theta)} = \lim_{\epsilon \to 0} \dfrac{K\exp(-j\theta)}{a\epsilon} =  \infty \angle -\theta 
+$$
+
+D:
+
+$s = j\omega,\quad \omega = \infty$
+$$
+\lim_{\omega\to \infty}G(j\omega)  =  \lim_{\omega\to \infty}\dfrac{K}{j\omega((j\omega)^2 + j\omega + a)} = \lim_{\omega\to \infty} \dfrac{K}{j\omega(-\omega^2 + j\omega + a)} = \lim_{\omega\to \infty} \dfrac{K}{-j\omega^3 - \omega^2 + aj\omega}
+$$
+$$
+\lim_{\omega\to \infty} \dfrac{K}{-j\omega^3} = \lim_{\omega\to \infty} \dfrac{jK}{\omega^3}  
+= 0 \angle 90^{\circ}
+$$
+
+F:
+
+$s = j\omega,\quad \omega = -\infty$
+$$
+\lim_{\omega\to -\infty}G(j\omega)  =  \lim_{\omega\to -\infty}\dfrac{K}{j\omega((j\omega)^2 + j\omega + a)} = \lim_{\omega\to -\infty} \dfrac{K}{j\omega(-\omega^2 + j\omega + a)} = \lim_{\omega\to -\infty} \dfrac{K}{-j\omega^3 - \omega^2 + aj\omega}
+$$
+$$
+\lim_{\omega\to -\infty} \dfrac{K}{-j\omega^3} = \lim_{\omega\to -\infty} \dfrac{jK}{\omega^3}  
+= 0 \angle -90^{\circ}
+$$
+
+\begin{figure}[H]
+	\caption{Nyquist plot using wolfram ($a = 1, K = 1$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q2/Wolfram_nyquist.png}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Nyquist plot using MATLAB ($a = 1, K = 1$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q2/MATAB-Nyquist.png}
+\end{figure}
+
+Now we know shape of nyquist plot. we find out where it's equal to $-1$.
+
+$$
+G(j\omega) = -1 + 0j = \dfrac{K}{j\omega((j\omega))^2 + j\omega + a)} = \dfrac{K}{-j\omega^3 - \omega^2 + aj\omega} = -1
+$$
+
+$$
+\to j\omega^3 + \omega^2 -aj\omega = K \to j\omega^3 + \omega^2 -aj\omega - K = 0
+$$
+Two equation and two unknowns.
+\begin{align*}
+	j\omega^3 &=aj\omega \to \omega^2 = a\\
+	\omega^2 &=K \to \omega^2 = K
+\end{align*}
+When $a = K$ the nyquist plot cross from $-1$ point. When $a>K$ the nyquist plot is before $-1$ and when $a<K$ the nyquist plot cross $-1$ and system is unstable.
+ 
+Now we check above using MATLAB.
+\begin{itemize}
+	\item $a>K$
+	
+	$a = 10, K = 1$
+	\begin{figure}[H]
+		\caption{Nyquist plot using MATLAB ($a = 10, K = 1$)}
+		\centering
+		\includegraphics[width=12cm]{../Figure/Q2/MATAB-Nyquist_a_bigger.png}
+	\end{figure}
+	\item $a = K$
+	
+	$a = 1, K = 1$
+	\begin{figure}[H]
+		\caption{Nyquist plot using MATLAB ($a = 1, K = 1$)}
+		\centering
+		\includegraphics[width=12cm]{../Figure/Q2/MATAB-Nyquist.png}
+	\end{figure}
+	\item $a<K$
+	
+	$a = 1, K = 10$
+	\begin{figure}[H]
+		\caption{Nyquist plot using MATLAB ($a = 1, K = 10$)}
+		\centering
+		\includegraphics[width=12cm]{../Figure/Q2/MATAB-Nyquist_K_bigger.png}
+	\end{figure}
+\end{itemize}
+
