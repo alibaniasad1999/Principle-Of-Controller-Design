@@ -112,33 +112,57 @@ $$
 $$
 \to j\omega^3 + \omega^2 -aj\omega = K\exp(-\tau j\omega) \to j\omega^3 + \omega^2 -aj\omega - K\exp(-\tau j\omega) = 0
 $$
-if we assume $\tau \ll 1$ the problem is like previous question.
+if we assume $\omega\tau \ll 1$ the problem is like previous question.
 Two equation and two unknowns.
 \begin{align*}
-	j\omega^3 &=aj\omega \to \omega^2 = a\\
+	j\omega^3 &=aj\omega-Kj\omega\tau \to \omega^2 = a-K\tau\\
 	\omega^2 &=K \to \omega^2 = K
 \end{align*}
-When $a = K$ the nyquist plot cross from $-1$ point. When $a>K$ the nyquist plot is before $-1$ and when $a<K$ the nyquist plot cross $-1$ and system is unstable.
- 
-When $\tau \ll 1$ it's not true and we have nonlinear equation that is hard to slove.
+When $a = K$ the nyquist plot cross from $-1$ point. When $a-\tau\omega>K$ the nyquist plot is before $-1$ and when $a-\tau\omega<K$ the nyquist plot cross $-1$ and system is unstable.
+\begin{figure}[H]
+	\caption{Stable Nyquist plot using MATLAB ($a = 2, K = 1, \tau = 0.01$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_stable.png}
+\end{figure} 
+\begin{figure}[H]
+	\caption{Unstable Nyquist plot using MATLAB ($a = 1, K = 2, \tau = 0.01$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_unstable.png}
+\end{figure}
 
+When $\tau \ll 1$ it's not true and we have nonlinear equation that is hard to slove.
 \begin{align*}
-	j\omega^3 &=aj\omega - Kj\sin(\omega\tau)\\
+	j\omega^3 &=aj\omega - Kj\sin(\tau\omega)\\
 	\omega^2 &=K\cos(\tau\omega)
 \end{align*}
+
 when $\tau$ increase we must increase $a$ or decrease $K$ for stable system.
 
 \begin{figure}[H]
-	\caption{Nyquist plot using MATLAB ($a = 1, K = 1, \tau = 2$)}
+	\caption{Unstable Nyquist plot using MATLAB ($a = 1, K = 1, \tau = 2$)}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_increase_tau.png}
 \end{figure}
 
 \begin{figure}[H]
-	\caption{Nyquist plot using MATLAB ($a = 10, K = 1, \tau = 2$)}
+	\caption{Stable Nyquist plot using MATLAB ($a = 2, K = 1, \tau = 2$)}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_increase_tau_and_a.png}
 \end{figure}
+When we increase $\tau$ it's make our system unstable.
+
+\begin{figure}[H]
+	\caption{Unstable Nyquist plot  with large $\tau$ using MATLAB ($a = 2, K = 1, \tau = 100$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_increase_tau_very_lage.png}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Stable Nyquist plot with large $\tau$ and small $K$ using MATLAB ($a = 2, K = 0.00001, \tau = 100$)}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q3/MATLAB-Nyquist_increase_tau_very_lage_K_very_low.png}
+\end{figure}
+
 
 
 
