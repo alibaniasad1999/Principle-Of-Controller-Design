@@ -1,0 +1,15 @@
+s   = tf('s');
+a   = 1;
+K   = 1;
+tau = .01;
+G   = K * exp(-tau * s)/(s * (s^2 + s + a));
+nyquist(G);
+print('../../Figure/Q3/MATLAB-Nyquist','-dpng','-r400');
+tau = 2;
+G   = K * exp(-tau * s)/(s * (s^2 + s + a));
+nyquist(G);
+print('../../Figure/Q3/MATLAB-Nyquist_increase_tau','-dpng','-r400');
+a   = 10;
+G   = K * exp(-tau * s)/(s * (s^2 + s + a));
+nyquist(G);
+print('../../Figure/Q3/MATLAB-Nyquist_increase_tau_and_a','-dpng','-r400');
