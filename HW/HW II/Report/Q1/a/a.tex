@@ -1,0 +1,39 @@
+\subsection{lead compensation}
+$$
+G_c(s) = K_c\dfrac{s + \dfrac{1}{T}}{s+\dfrac{1}{\alpha T}}, \quad 0 < \alpha < 1
+$$
+$$
+G_c(s) = K_c \alpha \dfrac{Ts + 1}{\alpha T s + 1}
+$$
+Define:
+$$K_c\alpha = K$$
+then:
+$$
+G_c(s) = K \dfrac{Ts + 1}{\alpha T s + 1}
+$$
+The open-loop transfer function of the compensated system is:
+$$
+G_c(s)G(s) = G_c(s) = K \dfrac{Ts + 1}{\alpha T s + 1} G(s)
+= G_c(s) = \dfrac{Ts + 1}{\alpha T s + 1}KG(s) = G_c(s) = \dfrac{Ts + 1}{\alpha T s + 1}G_1(s)
+$$
+Where:
+$$
+KG(s)= G_1(s)
+$$
+% The phase angle:
+The amplitude ratio:
+$$
+\left\vert G(j\omega) \right\vert = \dfrac{50\sqrt{\omega^2+0.5^2}}{\sqrt{\omega^2+1^2}\times(\sqrt{\omega^2 + 1.5^2})^3\times\sqrt{\omega^2 + 2^2}}
+$$
+Gain Crossover frequency:
+$$
+\left\vert G(j\omega_g) \right\vert = 1
+$$
+\newline
+$$
+\dfrac{50\sqrt{\omega_g^2+0.5^2}}{\sqrt{\omega_g^2+1^2}\times(\sqrt{\omega_g^2 + 1.5^2})^3\times\sqrt{\omega_g^2 + 2^2}} = 1
+$$
+$$
+{50({\omega_g^2+0.25}}) = 
+{({\omega_g^2+1})({\omega_g^2 + 2.25})^3({\omega_g^2 + 4}})
+$$
