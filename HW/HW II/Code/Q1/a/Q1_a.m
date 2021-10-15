@@ -21,6 +21,7 @@ gamma = pi + atan(omega_g_ans/0.5) - atan(omega_g_ans/1) - ...
 gamma = gamma * 180 / pi;
 % add transfer function and check margin
 s = tf('s');
+G   =     50 * (s+ 0.5)/((s+1)*(s+1.5)^3*(s+2));
 G_1 = K * 50 * (s+ 0.5)/((s+1)*(s+1.5)^3*(s+2));
 margin(G_1);
 print('../../../Figure/Q1/a/margin.png','-dpng','-r400');
