@@ -51,6 +51,13 @@ Bode diagram for lag compensation using MATLAB.
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/controller.png}
 \end{figure}
+Nyquist plot for lag compensation using MATLAB.
+\begin{figure}[H]
+	\caption{lag compensation Nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/controller_nyquist.png}
+\end{figure}
+
 Now add lag compensation to system.
 $$
 G_c(s)G(s) = 0.3983 \dfrac{s + 0.6012}{s + 0.0467}\dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
@@ -61,11 +68,23 @@ Bode diagram for system with adding lag compensation.
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/new_margin.png}
 \end{figure}
+Nyquist plot for system with adding lag compensation.
+\begin{figure}[H]
+	\caption{Nyquist plot for system with lag compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new_nyquist.png}
+\end{figure}
 All bode diagram in one figure:
 \begin{figure}[H]
 	\caption{all bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/all_in_one.png}
+\end{figure}
+All Nyquist plot in one figure:
+\begin{figure}[H]
+	\caption{all Nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/all_in_one_nyquist.png}
 \end{figure}
 We didn't get what we want in equation so we change our before assumption.
 assume:
@@ -86,6 +105,12 @@ Bode diagram for lag compensation using MATLAB.
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/new_controller.png}
 \end{figure}
+Nyquist plot for lag compensation using MATLAB.
+\begin{figure}[H]
+	\caption{new lag compensation Nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new_controller_nyquist.png}
+\end{figure}
 Now add new lag compensation to system.
 $$
 G_c(s)G(s) = 0.3983 \dfrac{s + 0.1202}{s + 0.0093}\dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
@@ -96,10 +121,22 @@ Bode diagram for system with adding lag compensation.
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/new2_margin.png}
 \end{figure}
+Nyquist plot for system with adding lag compensation.
+\begin{figure}[H]
+	\caption{Nyquist plot for system with new lag compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new2_nyquist.png}
+\end{figure}
 All bode diagram in one figure:
 \begin{figure}[H]
 	\caption{all bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/new_all_in_one.png}
+\end{figure}
+All Nyquist plot in one figure:
+\begin{figure}[H]
+	\caption{all Nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new_all_in_one_nyquist.png}
 \end{figure}
 In new lag compensation phase margin is $45.3^{\circ}$ and we are near to question requirement.
