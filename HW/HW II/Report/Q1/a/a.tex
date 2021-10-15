@@ -67,11 +67,17 @@ $$
 $$
 Now we check above calculation with MATLAB margin function.
 \begin{figure}[H]
-	\caption{Bode digram using MATLAB}
+	\caption{System Bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/a/margin.png}
 \end{figure}
-MATLAB bode digram and our calculation are exactly the same.
+Nyquist plot for system.
+\begin{figure}[H]
+	\caption{System Nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/system_nyquist.png}
+\end{figure}
+MATLAB bode diagram and our calculation are exactly the same.
 $$
 \bar{\gamma} = 45 + 5 = 50^{\circ},\quad \phi_m = \bar{\gamma} - \gamma = 126.0646^{\circ}.
 $$
@@ -102,26 +108,38 @@ $$
 $$
 G_c(s) = K_c \dfrac{s + \dfrac{1}{T}}{s + \dfrac{1}{\alpha T}} = 2691.1\dfrac{s + 0.3750}{s + 196.720}
 $$
-Bode digram for lead compensation using MATLAB.
+Bode diagram for lead compensation using MATLAB.
 \begin{figure}[H]
-	\caption{lead compensation Bode digram using MATLAB}
+	\caption{lead compensation Bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/a/controller_bode.png}
 \end{figure}
-Now add lead controller to system.
+Nyquist plot for lead compensation using MATLAB.
+\begin{figure}[H]
+	\caption{lead compensation nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/controller_nyquist.png}
+\end{figure}
+Now add lead compensation to system.
 $$
 G_c(s)G(s) = 2691.1\dfrac{s + 0.3750}{s + 196.720} \dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
 $$
-Bode digram for system with adding lead compensation.
+Bode diagram for system with adding lead compensation.
 \begin{figure}[H]
-	\caption{Bode digram for system with lead compensation using MATLAB}
+	\caption{Bode diagram for system with lead compensation using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/a/new_margin.png}
 \end{figure}
-That was the best we can do with lead compensation!
-All bode digram in one figure:
+Nyquist plot for system with adding lead compensation.
 \begin{figure}[H]
-	\caption{all bode digram using MATLAB}
+	\caption{Nyquist plot for system with lead compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/new_nyquist.png}
+\end{figure}
+That was the best we can do with lead compensation!
+All bode diagram in one figure:
+\begin{figure}[H]
+	\caption{all bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/a/all_in_one.png}
 \end{figure}

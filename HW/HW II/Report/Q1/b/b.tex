@@ -45,38 +45,61 @@ $$
 G_c(s) = K_c \dfrac{s + \dfrac{1}{T}}{s + \dfrac{1}{\beta T}}
 = 0.3983 \dfrac{s + 0.6012}{s + 0.0467}
 $$
-Bode digram for lag compensation using MATLAB.
+Bode diagram for lag compensation using MATLAB.
 \begin{figure}[H]
-	\caption{lag compensation Bode digram using MATLAB}
+	\caption{lag compensation Bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/controller.png}
 \end{figure}
-Now add lag controller to system.
+Now add lag compensation to system.
 $$
 G_c(s)G(s) = 0.3983 \dfrac{s + 0.6012}{s + 0.0467}\dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
 $$
-Bode digram for system with adding lag compensation.
+Bode diagram for system with adding lag compensation.
 \begin{figure}[H]
-	\caption{Bode digram for system with lag compensation using MATLAB}
+	\caption{Bode diagram for system with lag compensation using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/new_margin.png}
 \end{figure}
-All bode digram in one figure:
+All bode diagram in one figure:
 \begin{figure}[H]
-	\caption{all bode digram using MATLAB}
+	\caption{all bode diagram using MATLAB}
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/b/all_in_one.png}
 \end{figure}
-We didn't get what we want in equation so we change our before assumation.
+We didn't get what we want in equation so we change our before assumption.
 assume:
 $$
 \dfrac{1}{T} = \dfrac{\omega_g}{10} 
-\to \dfrac{1}{T}  = 0.1202 \to T = 1.6632
+\to \dfrac{1}{T}  = 0.1202 \to T = 8.3161
 $$
 $$
-\to \dfrac{1}{\beta T} = 0.0467, \quad K_c = \dfrac{K}{\beta} = \dfrac{5.1300}{12.8807} = 0.3983
+\to \dfrac{1}{\beta T} = 0.0093, \quad K_c = \dfrac{K}{\beta} = \dfrac{5.1300}{12.8807} = 0.3983
 $$
 $$
 G_c(s) = K_c \dfrac{s + \dfrac{1}{T}}{s + \dfrac{1}{\beta T}}
-= 0.3983 \dfrac{s + 0.6012}{s + 0.0467}
+= 0.3983 \dfrac{s + 0.1202}{s + 0.0093}
 $$
+Bode diagram for lag compensation using MATLAB.
+\begin{figure}[H]
+	\caption{new lag compensation Bode diagram using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new_controller.png}
+\end{figure}
+Now add new lag compensation to system.
+$$
+G_c(s)G(s) = 0.3983 \dfrac{s + 0.1202}{s + 0.0093}\dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
+$$
+Bode diagram for system with adding lag compensation.
+\begin{figure}[H]
+	\caption{Bode diagram for system with new lag compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new2_margin.png}
+\end{figure}
+All bode diagram in one figure:
+\begin{figure}[H]
+	\caption{all bode diagram using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/b/new_all_in_one.png}
+\end{figure}
+In new lag compensation phase margin is $45.3^{\circ}$ and we are near to question requirement.

@@ -25,6 +25,8 @@ G   =     50 * (s+ 0.5)/((s+1)*(s+1.5)^3*(s+2));
 G_1 = K * 50 * (s+ 0.5)/((s+1)*(s+1.5)^3*(s+2));
 margin(G_1);
 print('../../../Figure/Q1/a/margin.png','-dpng','-r400');
+nyquist(G_1);
+print('../../../Figure/Q1/a/system_nyquist.png','-dpng','-r400');
 gamma_bar = 45 + 5; % from qestion + 5 degree
 % phi_m     = gamma_bar - gamma;
 % this is too much so we do our best with lead
@@ -52,9 +54,13 @@ T     = double(T);
 G_c = K_c * (s + 1 / T) / (s + 1 / (T * alpha));
 bode(G_c);
 print('../../../Figure/Q1/a/controller_bode.png','-dpng','-r400');
+nyquist(G_c);
+print('../../../Figure/Q1/a/controller_nyquist.png','-dpng','-r400');
 % add controller to system
 margin(G_c * G);
 print('../../../Figure/Q1/a/new_margin.png','-dpng','-r400');
+nyquist(G_c * G);
+print('../../../Figure/Q1/a/new_nyquist.png','-dpng','-r400');
 % all bode in one
 bode(G_1);
 hold;
