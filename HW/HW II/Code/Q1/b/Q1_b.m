@@ -22,6 +22,7 @@ G_c = K_c * (s + 1 / T) / (s + 1 / (beta * T));
 bode(G_c);
 print('../../../Figure/Q1/b/controller.png','-dpng','-r400');
 G   = 50 * (s+ 0.5)/((s+1)*(s+1.5)^3*(s+2));
+G_1 = K * G;
 margin(G_c * G);
 print('../../../Figure/Q1/b/new_margin.png','-dpng','-r400');
 bode(G_1);
@@ -30,5 +31,17 @@ bode(G_c);
 bode(G_c*G);
 legend('system', 'lead compensation', 'system with lead compensation');
 print('../../../Figure/Q1/b/all_in_one.png','-dpng','-r400');
-
-
+hold off;
+%%%% change assume %%%%
+T = 10 / omega_g_ans;
+G_c = K_c * (s + 1 / T) / (s + 1 / (beta * T));
+bode(G_c);
+print('../../../Figure/Q1/b/new_controller.png','-dpng','-r400');
+margin(G_c * G);
+print('../../../Figure/Q1/b/new2_margin.png','-dpng','-r400');
+bode(G_1);
+hold;
+bode(G_c);
+bode(G_c*G);
+legend('system', 'lead compensation', 'system with lead compensation');
+print('../../../Figure/Q1/b/new_all_in_one.png','-dpng','-r400');
