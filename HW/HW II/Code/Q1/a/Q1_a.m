@@ -80,4 +80,3 @@ margin(G_c_1 * G_c * G);
 print('../../../Figure/Q1/a/two_lead_new_margin.png','-dpng','-r400');
 nyquist(G_c_1 * G_c * G);
 print('../../../Figure/Q1/a/two_lead_new_nyquist.png','-dpng','-r400');
-%% new lead
