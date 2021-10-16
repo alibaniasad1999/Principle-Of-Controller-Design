@@ -85,7 +85,7 @@ $$
 \phi_m = 85^{\circ}
 $$
 This is too much!
-best we can do is about $90^{\circ}$ in lead compensation so we add $85^{\circ}$
+best we can do is about $90^{\circ}$ in lead compensation so we add $85^{\circ}$.
 $$
 \sin(\phi_m) = \dfrac{1-\alpha}{1+\alpha} \to
 \alpha = \dfrac{1-\sin(\phi_m) }{1+\sin(\phi_m) } = 0.0019
@@ -95,7 +95,7 @@ $$
 K_c = \dfrac{K}{\alpha} = \dfrac{5.1300}{0.0019} = 2691.1
 $$
 $$
-\left\vert G_1(j\omega_m) \right\vert = \sqrt{\alpha} = \left\vert KG(j\omega_m) \right\vert = 5.13 \dfrac{50\sqrt{\omega_m^2+0.5^2}}{\sqrt{\omega_m^2+1^2}\times(\sqrt{\omega_m^2 + 1.5^2})^3\times\sqrt{\omega_m^2 + 2^2}} = 0.0019
+\left\vert G_1(j\omega_m) \right\vert = \sqrt{\alpha} = \left\vert KG(j\omega_m) \right\vert = 5.13 \dfrac{50\sqrt{\omega_m^2+0.5^2}}{\sqrt{\omega_m^2+1^2}\times(\sqrt{\omega_m^2 + 1.5^2})^3\times\sqrt{\omega_m^2 + 2^2}} = \sqrt{0.0019}
 $$
 This equation solved with MATLAB and code has attacked (Q1\_a.m).
 $$
@@ -128,6 +128,7 @@ Bode diagram for system with adding lead compensation.
 \begin{figure}[H]
 	\caption{Bode diagram for system with lead compensation using MATLAB}
 	\centering
+	\label{margin with one lead}
 	\includegraphics[width=12cm]{../Figure/Q1/a/new_margin.png}
 \end{figure}
 Nyquist plot for system with adding lead compensation.
@@ -143,3 +144,66 @@ All bode diagram in one figure:
 	\centering
 	\includegraphics[width=12cm]{../Figure/Q1/a/all_in_one.png}
 \end{figure}
+We didn't get requirement so we add new lead compensation.
+we skip previous calculation and use MATLAB margin function in figure \ref{margin with one lead}.
+$$
+\bar{\gamma} = 45 + 5 = 50^{\circ},\quad \phi_m = \bar{\gamma} - \gamma = 98.9000^{\circ}.
+$$
+$$
+\phi_m = 85^{\circ}
+$$
+This is too much!
+best we can do is about $90^{\circ}$ in lead compensation so we add $85^{\circ}$.
+$$
+\sin(\phi_m) = \dfrac{1-\alpha}{1+\alpha} \to
+\alpha = \dfrac{1-\sin(\phi_m) }{1+\sin(\phi_m) } = 0.0019
+$$
+$\alpha$ is very low.
+With before lead compensation we currect steady state error so we assume $K = 1$.
+$$
+K_c = \dfrac{K}{\alpha} = \dfrac{1}{0.0019} = 524.5825
+$$
+From previous calculation and MATLAB calculation figure \ref{margin with one lead} $\omega_m = 8.58898$
+$$
+\omega_m = \dfrac{1}{T\sqrt{\alpha}} \to
+T = \dfrac{1}{\omega_m\sqrt{\alpha}} = \dfrac{1}{8.58898\sqrt{0.0019}} = 2.6666
+$$
+$$
+G_c(s) = K_c \dfrac{s + \dfrac{1}{T}}{s + \dfrac{1}{\alpha T}} = 524.5825\dfrac{s + 0.3750}{s + 196.720}
+$$
+Bode diagram for second lead compensation using MATLAB.
+\begin{figure}[H]
+	\caption{second lead compensation Bode diagram using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/new_controller_bode.png}
+\end{figure}
+Nyquist plot for second lead compensation using MATLAB.
+\begin{figure}[H]
+	\caption{second lead compensation nyquist plot using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/new_controller_nyquist.png}
+\end{figure}
+Now add second lead compensation to system and lag compensation.
+$$
+C_{c_1}(s)G_c(s)G(s) = 524.5825\dfrac{s + 0.3750}{s + 196.720}
+2691.1\dfrac{s + 0.3750}{s + 196.720}
+ \dfrac{50(s+0.5)}{(s+1)(s+1.5)^{3}(s+2)}
+$$
+Bode diagram for system with adding lead compensation.
+\begin{figure}[H]
+	\caption{Bode diagram for system with lead compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/two_lead_new_margin.png}
+\end{figure}
+Nyquist plot for system with adding lead compensation.
+\begin{figure}[H]
+	\caption{Nyquist plot for system with lead compensation using MATLAB}
+	\centering
+	\includegraphics[width=12cm]{../Figure/Q1/a/two_lead_new_nyquist.png}
+\end{figure}
+We didn't get requirement so we add new lead compensation.
+we skip previous calculation and use MATLAB margin function in figure \ref{margin with one lead}.
+$$
+\bar{\gamma} = 45 + 10 = 55^{\circ},\quad \phi_m = \bar{\gamma} - \gamma = 98.9000^{\circ}.
+$$
+
