@@ -4,7 +4,6 @@
 */*/*/slprj/
 *.asv
 *.autosave
-*.mat
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
