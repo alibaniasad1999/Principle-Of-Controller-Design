@@ -18,5 +18,5 @@ print('../../../Figure/Q1/Q1_c/bode_du2y.png','-dpng','-r400');
 bode(1 / C * G);
 print('../../../Figure/Q1/Q1_c/bode_dy2y.png','-dpng','-r400');
 % n to y
-bode(C * G / (1 + C * G));
+bode(-C * G / (1 + C * G));
 print('../../../Figure/Q1/Q1_c/bode_n2y.png','-dpng','-r400');

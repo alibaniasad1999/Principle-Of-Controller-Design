@@ -7,6 +7,9 @@ For transfer function we use common architecture.
 \end{figure}
 \begin{itemize}
     \item r to y refrence
+    $$
+    \dfrac{y}{r} = \dfrac{C(s)G(s)}{1+C(s)G(s)}
+    $$
     \begin{figure}[H]
         \caption{r to y bode magnitude}
         \centering
@@ -14,6 +17,9 @@ For transfer function we use common architecture.
     \end{figure}
     System has a good performance at high frequency but not good performance at low frequency.
     \item du to y distubance
+    $$
+    \dfrac{y}{du} = \dfrac{G(s)}{1+C(s)G(s)}
+    $$
     \begin{figure}[H]
         \caption{du to y bode magnitude}
         \centering
@@ -21,6 +27,9 @@ For transfer function we use common architecture.
     \end{figure}
     System has a better performance at high frequency but pretty good performance at low frequency.
     \item dy to y distubance
+    $$
+    \dfrac{y}{dy} = \dfrac{1)}{C(s)G(s)}
+    $$
     \begin{figure}[H]
         \caption{dy to y bode magnitude}
         \centering
@@ -28,6 +37,9 @@ For transfer function we use common architecture.
     \end{figure}
     System has a good performance at high frequency but very bad performance at low frequency.
     \item n to y noise
+    $$
+    \dfrac{y}{du} = \dfrac{-C(s)G(s)}{1+C(s)G(s)}
+    $$
     \begin{figure}[H]
         \caption{n to y bode magnitude}
         \centering
