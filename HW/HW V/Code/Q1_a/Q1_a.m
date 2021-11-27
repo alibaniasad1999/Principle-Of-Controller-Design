@@ -5,7 +5,7 @@ print('../../Figure/Q1/Q1_a/rlocus.png','-dpng','-r400');
 step(feedback(G, 1));
 print('../../Figure/Q1/Q1_a/feedback_step.png','-dpng','-r400');
 bode(feedback(G, 1));
-print('../../Figure/Q1/Q1_a/feedback_bode.png','-dpng','-r400');
+print('../../Figure/Q1/Q1_a/feedback_bode.png','-dpng','-r400t');
 bode(G);
 print('../../Figure/Q1/Q1_a/openloop_bode.png','-dpng','-r400');
 s_function = 1 / (1 + G);
