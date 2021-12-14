@@ -76,12 +76,12 @@ Now design PID controller with following methods.
         \centering
         \includegraphics[width=10cm]{../Figure/Q1/b/chr0.png}
     \end{figure}
-    \item CHR set point $2\%$ overshoot
+    \item CHR set point $20\%$ overshoot
     $$
     G_c =   \dfrac{1.758 s^2 + 2.581 s + 1.797}{0.08893 s^2 + 1.371 s}
     $$ 
     \begin{figure}[H]
-        \caption{step responde with CHR set point $2\%$ overshoot PID controller}
+        \caption{step responde with CHR set point $20\%$ overshoot PID controller}
         \centering
         \includegraphics[width=10cm]{../Figure/Q1/b/chr20.png}
     \end{figure}
@@ -113,4 +113,10 @@ Now design PID controller with following methods.
         \includegraphics[width=10cm]{../Figure/Q1/b/optpi-d.png}
     \end{figure}  
 \end{itemize}
-
+\subsection{conclusion}
+ziegler nichols is very slow but refined ziegler nichols is better ans faster. modified ziegler nichols is very slow.
+Cohen coon is slow and has hight overshoot but cohen coon revisited is faster.
+Astromm hagglund is very good in doesn't have overshoot and system is fast but Frequency is a little slow. CHR is fast but overshoot method work strange. Zero overshoot has overshoot but 20\% overshoot has lower overshoot.
+WJC work fast and have very small overshoot.
+Optimum PID work well but PI-D is a little slow.
+We don't what the system is so we can't select best controller it depends on our plant.

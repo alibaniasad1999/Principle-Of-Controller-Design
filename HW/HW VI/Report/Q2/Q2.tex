@@ -1,0 +1,74 @@
+\section{Question 2}
+System is:
+$$
+G(s) = \frac{-s + 3}{s(s+2)(s^2+2s+4)}
+$$
+\subsection{part a}
+Integral plus Time Delay:
+$$
+G = e^{-1.15s}\dfrac{0.375}{s(0.378s +  1)}       
+$$
+\begin{figure}[H]
+    \caption{system and ITD step responde}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/IDT1.png}
+\end{figure}
+Now we use foipdt function.
+\begin{figure}[H]
+    \caption{step responde with foipdt PD controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/foipdt_PD.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{step responde with foipdt PID controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/foipdt_PID.png}
+\end{figure}
+\subsection{part b}
+Integral plus Time Delay:
+$$
+G = e^{-1.33s}\dfrac{0.375}{s}      
+$$
+\begin{figure}[H]
+    \caption{system and ITD step responde}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/IDT2.png}
+\end{figure}
+Now we use ipdtctrl function.
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ISE PD controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pd1.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ITSE PD controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pd2.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ISTSE PD controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pd3.png}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ISE PID controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pid1.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ITSE PID controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pid2.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{step responde with ipdtctrl for ISTSE PID controller}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q2/pid3.png}
+\end{figure}
+
+\subsection{conclusion}
+Firt ITD function doesn't fit well but PD controller work very good but PID controller work very bad too slow for setteling time and has a high overshoot. system has integrator so we don't need to have integrator in controller and just make system slow and pendulous.
+Second ITD fits very good bad PD and PID controller don't work well.
+PD is far better than PID and PID is too slow and pendulous.
+In final PD controller used first method is the best fot this system.
