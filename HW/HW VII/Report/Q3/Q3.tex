@@ -1,0 +1,12 @@
+\section{Question 3}
+System:
+$$
+G_{1_{(s)}} = \dfrac{1}{(17s+1)(5s+1)}\exp(-30s) = \dfrac{1}{102s^2+23s+1}
+$$
+We use Optimal PID to design controller with ITAE cost function. In program we use 40, 100, 400 and second for optimization but use 400 second for simulation to see system behavior. ITAE cost function work well in last question so we use this cost function in different time optimization.
+\begin{figure}[H]
+    \caption{Step responde with PID controller and ITAE cost function for different time}
+    \centering
+    \includegraphics[width=11cm]{../Figure/Q3/ITAE.png}
+\end{figure}
+In 40 second system is unstable but in other time system is stable and when we increse time PID conteller work better.
