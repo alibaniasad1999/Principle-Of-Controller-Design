@@ -11,7 +11,8 @@ g = 9.8 ; % m/s^2
 % transfer functions
 s = tf('s');
 R_theta    = m * g * d / (7 / 5 * L * s^2); % R / theta
-theta_V    = 0.0274 / (0.003228 * s^2 + 0.003508 * s); % theta / V
-gear_motor = 1/5; % gearbox ratio
+theta_motor_V    = 0.0274 / (0.003228 * s^2 + 0.003508 * s); % theta / V
+gear_ratio = 1/5; % gearbox ratio
+R_theta_motor = R_theta * gear_ratio;
 % final 
-G_R_V = R_theta * gear_motor * theta_V;
+G_R_V = R_theta * gear_ratio * theta_motor_V;
