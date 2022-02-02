@@ -16,4 +16,4 @@ gear_ratio = 1/5; % gearbox ratio
 R_theta_motor = R_theta * gear_ratio;
 R_V = 0.5; % R2V
 % final 
-G_R_V = R_theta * gear_ratio * theta_motor_V;
+G_R_V = R_V * R_theta * gear_ratio * theta_motor_V;
