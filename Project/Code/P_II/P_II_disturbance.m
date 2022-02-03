@@ -22,6 +22,6 @@ bode(G_CL_partII_PI_dis,G_CL_partII_PIDF_dis)
 G_CL_partII_PI_dis.name = 'PI @matlab PID tuner disturbance rejection';
 G_CL_partII_PIDF_dis.name = 'PIDF @matlab PID tuner disturbance rejection';
 
- print('../../Figure/P_II/PID_tunner_dis_rej.png','-dpng','-r400');
+ print('../../Figure/P_VI/PID_tunner_dis_rej.png','-dpng','-r400');
 
 
